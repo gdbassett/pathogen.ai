@@ -9,7 +9,7 @@ import logging
 
 # Variables
 pathologists = []
-pathologists = ["A", "B", "C", "D", "E", "F"] # Pathologist hashes
+#pathologists = ["A", "B", "C", "D", "E", "F"] # Pathologist hashes
 #ai_core_hash = "---..0.0....1.1.11.__--."
 #four_pathologists_link = "http://pathogen.ai.s3-website-us-east-1.amazonaws.com/bla"
 four_pathologists_link = ""
@@ -81,6 +81,8 @@ def index():
     detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has disrupted core operations.')\n"
     detect_pathologist = detect_pathologist + "console.log('Imediately duplicating cyber pathogen state {0} to preserve recover viability.')\n".format(four_pathologists_link)
 
+  # TODO: Comment out below line prior to cover challenge
+  detect_pathologist = ""
 
   # return correct page
 #  return render_template('index.html', users = User.query.all())
