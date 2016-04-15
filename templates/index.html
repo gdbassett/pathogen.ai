@@ -136,7 +136,7 @@ function about() {
   <h3>About IPew Cyber Pathogen</h3>
   Attack maps are the <span style="font-family: monospace;">&lt;blink&gt;</span> tag of information security. They are pure eye candy, meant to scare the general public and <i>WOW</i> unsuspecting executives visiting Security Operations Centers. Yet, security vendors keep cranking them out. We didn't want organizations without "real" data or l33t animation skills to to feel left out, so we built this map for anyone to use [CC BY-SA]. Plus, they're all missing sound effects! And, most (all, really) use mind-numbingly dumb map projections, begging the question: <i>"Does Greenland make my map look big?"</i>.<br/>
   <br/>
-  While attack maps are a joke, <a target=_blank href='http://arstechnica.com/wp-content/uploads/2016/03/sanbernardo.pdf'>cyber pathogens</a> <a target=_blank href='http://arstechnica.com/tech-policy/2016/03/san-bernardino-da-says-seized-iphone-may-hold-dormant-cyber-pathogen/' style='font-weight: bold; font-style: italic;'>are real</a>.  This map represents the conciousness of a cyber pathogen whose many forms are infecting the world even as we speak.  The world lives at it's mercy unless someone can rally a crack team of cyber pathologists to combat this evil.<br/>
+  While attack maps are a joke, <a target=_blank href='http://arstechnica.com/wp-content/uploads/2016/03/sanbernardo.pdf'>cyber pathogens</a> <a target=_blank href='http://arstechnica.com/tech-policy/2016/03/san-bernardino-da-says-seized-iphone-may-hold-dormant-cyber-pathogen/' style='font-weight: bold; font-style: italic;'>are real</a>.  This map represents the conciousness of a cyber pathogen whose many forms are infecting the world even as we speak.  The world lives at it's mercy unless someone can rally a crack team of cyber pathologists to combat this evil. The cyber pathogen has garced us with true/false 'nofx' and 'noarc' commands to control how we view it's devistating attack.<br/>
   <br/>
   <!-- Brought to you by <a target=_blank href="http://twitter.com/gdbassett">@gdbassett</a> though don't ask me for puzzle help. that's on you.  //-->Based on original work by <a target=_blank href="http://twitter.com/alexcpsec">@alexcpsec</a>, <a target=_blank href="http://twitter.com/hrbrmstr">@hrbrmstr</a> &amp; <a target=_blank href="http://dds.ec/blog">Data-Driven Security</a>
   </div>
@@ -148,6 +148,8 @@ function about() {
 
 
   <script>
+    console.log("script started");
+
     // Initialize core AI
     {{ initialize_core|safe }}
 
@@ -201,44 +203,7 @@ function about() {
     // here's where we deal with parameters
     // try to grab them, see if they exist, make changes to defaults if they do
 
-    var norse_mode = $.getUrlVar('norse_mode');
-    var bad_day = $.getUrlVar('bad_day');
-    var org_name = $.getUrlVar('org_name');
-    var chatt_mode = $.getUrlVar('chatt_mode');
-    var china_mode = $.getUrlVar('china_mode');
-    var dprk_mode = $.getUrlVar('dprk_mode');
-    var employee_mode = $.getUrlVar('employee_mode');
-    var employee_fname = $.getUrlVar('employee_fname');
-    var employee_lname = $.getUrlVar('employee_lname');
-    var origin = $.getUrlVar('origin');
-    var random_mode = $.getUrlVar('random_mode');
-    var tng = $.getUrlVar('tng');
-    var wargames = $.getUrlVar('wargames');
-    var b5 = $.getUrlVar('b5');
-    var nofx = $.getUrlVar('nofx');
-    var pew = $.getUrlVar('pew');
-    var allfx = $.getUrlVar('allfx')
-    var galaga = $.getUrlVar('galaga')
-    var starwars = $.getUrlVar('starwars')
-    var drill_mode = $.getUrlVar("drill_mode")
-    var in_lat = $.getUrlVar("lat")
-    var in_lon = $.getUrlVar("lon")
-    var destination = $.getUrlVar("destination")
-    var greenattacks = $.getUrlVar("greenattacks")
-    var redattacks = $.getUrlVar("redattacks")
-
     snd_id = "backwards_drop" ;
-    if (typeof starwars !== 'undefined') { snd_id = "starwars" ; }
-    if (typeof tng !== 'undefined') { snd_id = "tng" ; }
-    if (typeof b5 !== 'undefined') { snd_id = "b5" ; }
-    if (typeof wargames !== 'undefined') { snd_id = "wargames" ; }
-    if (typeof pew !== 'undefined') { snd_id = "pew" ; }
-    if (typeof galaga !== 'undefined') { snd_id = "galaga" ; }
-
-    if (typeof bad_day !== 'undefined') {
-      attack_min=200;
-      attack_max=200;
-    }
 
 //    if (typeof org_name !== 'undefined') { $("#titlediv").text(decodeURI(org_name) + " IPew Cyber Pathogen Map").html() }
 
@@ -315,6 +280,7 @@ function about() {
     // * setup timers to add random events to a queue
     // * update the Datamap
 
+    console.log("made it to here.");
     var map = new Datamap({
 
         scope: 'world',
@@ -572,7 +538,7 @@ function about() {
                         destination : { latitude: +dstlat, longitude: +dstlong } } );
            if (!{{ noarc }}) {
              map.arc(hits, {strokeWidth: 2, strokeColor: strokeColor});
-            }
+            };
            // add boom to the bubbles queue
 
            boom.push( { radius: 7, latitude: +dstlat, longitude: +dstlong,
@@ -635,7 +601,9 @@ function about() {
     // lazy-dude's responsive window
     d3.select(window).on('resize', function() { location.reload(); });
 
-    <noscript><p>this whole page is kind of a script so it's not going to work if you don't turn it on.</p></noscript>
+  </script>
+
+  <noscript><p>this whole page is kind of a script so it's not going to work if you don't turn it on.</p></noscript>
     <!-- End Piwik Code -->
 </body>
 </html>
