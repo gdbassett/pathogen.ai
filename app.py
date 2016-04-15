@@ -8,13 +8,25 @@ import logging
 #from flask.ext.sqlalchemy import SQLAlchemy
 
 # Variables
-pathologists = []
-#pathologists = ["A", "B", "C", "D", "E", "F"] # Pathologist hashes
-#ai_core_hash = "---..0.0....1.1.11.__--."
+test_key = "6da80b8abed714cc033779f72ccdbbad"
+#pathologists = []
+pathologists = ["4843e5c207993ad07e0f3a211a44e9d5",  # Alexa Hudson 
+                "75bb0824219e060bd5d4a560d606461d", # Nude Haberdasher
+                "b3eb869972c959bdd9642433970ae414", # rob boodis
+                "6fbbb157a00d8bf8e3a3b7b1b91a3e38",  # Bhaskar 
+                "89c7c9211cd041376d4b1e52d962c1f9",  # Porter
+                "1e17348c328d1054332e9f1d163a48ea",  # baker
+                "9d7e1007ecf7445a02f5ed83b32ff32c",  # Jay
+                "8312475fe80119819e749b6527dfa534",  # Ally
+                "d2c6602d18956acccdf68ebdfe29bb38",  # Tippet
+                ] # Pathologist hashes
+# TODO: Uncomment core ai hash value
+#ai_core_hash = "ls0tli4wljauli4ums4xljexll9fls0u" # lower case of: LS0tLi4wLjAuLi4uMS4xLjExLl9fLS0u" # hash of "---..0.0....1.1.11.__--."
 #four_pathologists_link = "http://pathogen.ai.s3-website-us-east-1.amazonaws.com/bla"
-four_pathologists_link = ""
-five_pathologists_link = ""
-six_plus_pathologists_link = ""
+# TODO: Replace with correct link
+four_pathologists_link = "TBD"
+five_pathologists_link = "TBD"
+six_plus_pathologists_link = "TBD"
 
 # Argument Parser
 #api_parser = reqparse.RequestParser()
@@ -46,13 +58,20 @@ def index():
 
   # Get arguments
   pathologists_submitted = request.args.getlist('pathologist')
+  test_key_submitted = request.args.get("test_key", False)
+  noarc = requests.args.get('noarc', "false")
+  noarc = noarc.lower()
   nofx = request.args.get('nofx', "false")
   nofx = nofx.lower()
 
   # look up submitted hashes
   #log.debug(pathologists_submitted)
   #log.debug(pathologists) 
-  pathologists_submitted = set(pathologists_submitted).intersection(pathologists)
+  #TODO: Remove test_key check
+  if test_key_submitted == test_key:
+    pathologists_submitted = set(pathologists_submitted).intersection(pathologists)
+  else:
+    pathologists_submitted = []
   pathologists_cnt = len(pathologists_submitted)
   log.debug(pathologists_cnt)
   clrRate = {0:0.01, 1:0.05, 2:0.25, 3:0.75, 4:0.8, 5:0.95, 6:1}[pathologists_cnt]
@@ -82,11 +101,11 @@ def index():
     detect_pathologist = detect_pathologist + "console.log('Imediately duplicating cyber pathogen state {0} to preserve recover viability.')\n".format(four_pathologists_link)
 
   # TODO: Comment out below line prior to cover challenge
-  detect_pathologist = ""
+  #detect_pathologist = ""
 
   # return correct page
 #  return render_template('index.html', users = User.query.all())
-  return render_template('index.html', clearRate=clrRate, nofx=nofx, detect_pathologist=detect_pathologist, initialize_core=initialize_core) # No pathologists
+  return render_template('index.html', clearRate=clrRate, nofx=nofx, noarc=noarc, detect_pathologist=detect_pathologist, initialize_core=initialize_core) # No pathologists
 
 #@app.route('/user', methods=['POST'])
 #def user():
