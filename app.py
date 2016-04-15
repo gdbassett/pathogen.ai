@@ -59,7 +59,7 @@ def index():
   # Get arguments
   pathologists_submitted = request.args.getlist('pathologist')
   test_key_submitted = request.args.get("test_key", False)
-  noarc = requests.args.get('noarc', "false")
+  noarc = request.args.get('noarc', "false")
   noarc = noarc.lower()
   nofx = request.args.get('nofx', "false")
   nofx = nofx.lower()
