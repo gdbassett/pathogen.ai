@@ -24,9 +24,9 @@ pathologists = ["4843e5c207993ad07e0f3a211a44e9d5",  # Alexa Hudson
 #ai_core_hash = "ls0tli4wljauli4ums4xljexll9fls0u" # lower case of: LS0tLi4wLjAuLi4uMS4xLjExLl9fLS0u" # hash of "---..0.0....1.1.11.__--."
 #four_pathologists_link = "http://pathogen.ai.s3-website-us-east-1.amazonaws.com/bla"
 # TODO: Replace with correct link
-four_pathologists_link = "TBD"
-five_pathologists_link = "TBD"
-six_plus_pathologists_link = "TBD"
+four_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.8f94829b479a2585e080ab0d4a39df89"
+five_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.9ae6273bb5be683bc25575be011587d7"
+six_plus_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.7a4a1d52ba6f507f258e67dee5c3f3b9"
 
 # Argument Parser
 #api_parser = reqparse.RequestParser()
