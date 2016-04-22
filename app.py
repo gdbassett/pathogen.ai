@@ -76,29 +76,29 @@ def index():
   log.debug(pathologists_cnt)
   clrRate = {0:0.01, 1:0.05, 2:0.25, 3:0.75, 4:0.8, 5:0.95, 6:1}[pathologists_cnt]
 
-  # Swap values and replace hash when ready to initialize project
+  # TODO: Swap values and replace hash when ready to initialize project
   #initialize_core = "console.log('Initiating AI core {0}')\n".format(ai_core_hash)
-  initialize_core = ""
+  initialize_core = "console.log('Waiting to initialize AI core');"
 
   # providing warning of detection
-  detect_pathologist = "console.log('Beginning monitoring Global cyberCDC team for cyber pathologists.')\n"
-  if pathologists_cnt <= 1:
-    detect_pathologist = detect_pathologist + "console.log('One insignficiant Cyper Pathologist found. No impact projected.')\n"
+  detect_pathologist = "console.log('Beginning monitoring Global cyberCDC team for cyber pathologists.');\n"
+  if pathologists_cnt < 1:
+    detect_pathologist = detect_pathologist + "console.log('One insignficiant Cyper Pathologist found. No impact projected.');\n"
   elif pathologists_cnt == 1:
-    detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologist Detected! Infection rates may be affected.')\n"
+    detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologist Detected! Infection rates may be affected.');\n"
   elif pathologists_cnt > 1:
-    detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologists Detected! Infection rates may be affected.')\n"
+    detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologists Detected! Infection rates may be affected.');\n"
   for p in pathologists_submitted:
-    detect_pathologist = detect_pathologist + "console.log('Pathologist {0} identified.')\n".format(p)
+    detect_pathologist = detect_pathologist + "console.log('Pathologist {0} identified.');\n".format(p)
   if pathologists_cnt == 4:
-    detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has endangered core operations.')\n"
-    detect_pathologist = detect_pathologist + "console.log('Duplicating cyber pathogen state 0} to preserve disaster recovery options.')\n".format(four_pathologists_link)
+    detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has endangered core operations.');\n"
+    detect_pathologist = detect_pathologist + "console.log('Duplicating cyber pathogen state {0} to preserve disaster recovery options.');\n".format(four_pathologists_link)
   elif pathologists_cnt == 5:
-    detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has compromised core operations.')\n"
-    detect_pathologist = detect_pathologist + "console.log('Duplicating cyber pathogen state {0} to preserve disaster recovery options.')\n".format(four_pathologists_link)
+    detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has compromised core operations.');\n"
+    detect_pathologist = detect_pathologist + "console.log('Duplicating cyber pathogen state {0} to preserve disaster recovery options.');\n".format(five_pathologists_link)
   elif pathologists_cnt >= 6:
-    detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has disrupted core operations.')\n"
-    detect_pathologist = detect_pathologist + "console.log('Imediately duplicating cyber pathogen state {0} to preserve recover viability.')\n".format(four_pathologists_link)
+    detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has disrupted core operations.');\n"
+    detect_pathologist = detect_pathologist + "console.log('Imediately duplicating cyber pathogen state {0} to preserve recover viability.');\n".format(six_plus_pathologists_link)
 
   # TODO: Comment out below line prior to cover challenge
   #detect_pathologist = ""
