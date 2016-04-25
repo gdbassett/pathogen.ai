@@ -6,7 +6,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_restful import reqparse
 import logging
 # TODO: Set 'False' before launch
-use_debugger=True
+use_debugger=False
 #from flask.ext.sqlalchemy import SQLAlchemy
 
 # Variables
