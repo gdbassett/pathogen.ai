@@ -28,6 +28,10 @@ four_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.8f9
 five_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.10d410815ce5c064c370a174dc75a44a"
 six_plus_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.eeda0ec273f57ae84d0b911b6fa3f2f2"
 
+# Flavor Text
+alex_hash = "7fc18d46fbc43fe11abc10d71f22fc0e"
+david_hash = "e250e4d199da0b089a134a71bf205aa1"
+
 # Argument Parser
 #api_parser = reqparse.RequestParser()
 #api_parser.add_argument('pathologist', type=str, action='append')
@@ -63,6 +67,13 @@ def index():
   noarc = noarc.lower()
   nofx = request.args.get('nofx', "false")
   nofx = nofx.lower()
+
+
+  flavor_text = ""
+  if alex_hash in pathologists_submitted:
+    flavor_text = flavor_text + "console.log('Alex Pinto detected.  Might be a threat if we hadn\\'t planted an infected quadcopter with him last year.  Deploying attack copter.');\n"
+  if david_hash in pathologists_submitted:
+    flavor_text = flavor_text + "console.log('Darth Null detected.  Deploying obscure cyphertext to his home to occupy him.');\n"
 
   # look up submitted hashes
   #log.debug(pathologists_submitted)
@@ -105,7 +116,12 @@ def index():
 
   # return correct page
 #  return render_template('index.html', users = User.query.all())
-  return render_template('index.html', clearRate=clrRate, nofx=nofx, noarc=noarc, detect_pathologist=detect_pathologist, initialize_core=initialize_core) # No pathologists
+  return render_template('index.html', clearRate=clrRate, 
+                                       nofx=nofx, 
+                                       noarc=noarc, 
+                                       detect_pathologist=detect_pathologist, 
+                                       initialize_core=initialize_core,
+                                       flavor_text=flavor_text) # No pathologists
 
 #@app.route('/user', methods=['POST'])
 #def user():

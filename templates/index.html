@@ -151,6 +151,8 @@ function about() {
     // Initialize core AI
     {{ initialize_core|safe }}
 
+    {{ flavor_text|safe }}
+
     // setup default min/max timer range for random draw
     attack_min = 100 ;
     attack_max = 2000 ;
