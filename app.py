@@ -15,7 +15,7 @@ pathologists = ["4843e5c207993ad07e0f3a211a44e9d5",  # Alexa Hudson
                 "b3eb869972c959bdd9642433970ae414", # rob boodis
                 "6fbbb157a00d8bf8e3a3b7b1b91a3e38",  # Bhaskar 
                 "89c7c9211cd041376d4b1e52d962c1f9",  # Porter
-                "1e17348c328d1054332e9f1d163a48ea",  # baker
+                "73a11c2a1b0b2593fe4ee7e3e5e2fc79",  # baker
                 "9d7e1007ecf7445a02f5ed83b32ff32c",  # Jay
                 "8312475fe80119819e749b6527dfa534",  # Ally
                 "d2c6602d18956acccdf68ebdfe29bb38",  # Tippet
