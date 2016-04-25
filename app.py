@@ -85,9 +85,9 @@ def index():
   if pathologists_cnt < 1:
     detect_pathologist = detect_pathologist + "console.log('One insignficiant Cyper Pathologist found. No impact projected.');\n"
   elif pathologists_cnt == 1:
-    detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologist Detected! Infection rates may be affected.');\n"
+    detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologist Detected! Infection rates may be affected. No preventative measures taken yet.');\n"
   elif pathologists_cnt > 1:
-    detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologists Detected! Infection rates may be affected.');\n"
+    detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologists Detected! Infection rates may be affected. No preventative measures taken yet.');\n"
   for p in pathologists_submitted:
     detect_pathologist = detect_pathologist + "console.log('Pathologist {0} identified.');\n".format(p)
   if pathologists_cnt == 4:
@@ -98,7 +98,7 @@ def index():
     detect_pathologist = detect_pathologist + "console.log('Duplicating cyber pathogen state {0} to preserve disaster recovery options.');\n".format(five_pathologists_link)
   elif pathologists_cnt >= 6:
     detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has disrupted core operations.');\n"
-    detect_pathologist = detect_pathologist + "console.log('Imediately duplicating cyber pathogen state {0} to preserve recover viability.');\n".format(six_plus_pathologists_link)
+    detect_pathologist = detect_pathologist + "console.log('Imediately duplicating cyber pathogen state {0} to preserve recover viability.  No further mitigations available.');\n".format(six_plus_pathologists_link)
 
   # TODO: Comment out below line prior to cover challenge
   #detect_pathologist = ""
