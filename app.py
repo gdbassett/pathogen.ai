@@ -25,8 +25,8 @@ pathologists = ["4843e5c207993ad07e0f3a211a44e9d5",  # Alexa Hudson
 #four_pathologists_link = "http://pathogen.ai.s3-website-us-east-1.amazonaws.com/bla"
 # TODO: Replace with correct link
 four_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.8f94829b479a2585e080ab0d4a39df89"
-five_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.9ae6273bb5be683bc25575be011587d7"
-six_plus_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.7a4a1d52ba6f507f258e67dee5c3f3b9"
+five_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.10d410815ce5c064c370a174dc75a44a"
+six_plus_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.eeda0ec273f57ae84d0b911b6fa3f2f2"
 
 # Argument Parser
 #api_parser = reqparse.RequestParser()
