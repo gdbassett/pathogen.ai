@@ -5,6 +5,8 @@ import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask_restful import reqparse
 import logging
+# TODO: Set 'False' before launch
+use_debugger=True
 #from flask.ext.sqlalchemy import SQLAlchemy
 
 # Variables
@@ -84,8 +86,13 @@ def index():
   else:
     pathologists_submitted = []
   pathologists_cnt = len(pathologists_submitted)
-  log.debug(pathologists_cnt)
-  clrRate = {0:0.01, 1:0.05, 2:0.25, 3:0.75, 4:0.8, 5:0.95, 6:1}[pathologists_cnt]
+  #log.debug(pathologists_cnt)
+  if pathologists_cnt < 0:
+    clrRate=0
+  elif pathologists_cnt > 0 and pathologists_cnt < 6:
+    clrRate = {0:0.01, 1:0.05, 2:0.25, 3:0.75, 4:0.8, 5:0.95, 6:1}[pathologists_cnt]
+  else: # pathologists_cnt >= 6
+    clrRate = 1
 
   # TODO: Swap values and replace hash when ready to initialize project
   #initialize_core = "console.log('Initiating AI core {0}')\n".format(ai_core_hash)
@@ -97,8 +104,10 @@ def index():
     detect_pathologist = detect_pathologist + "console.log('One insignficiant Cyper Pathologist found. No impact projected.');\n"
   elif pathologists_cnt == 1:
     detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologist Detected! Infection rates may be affected. No preventative measures taken yet.');\n"
-  elif pathologists_cnt > 1:
+  elif pathologists_cnt > 1 and pathologists_cnt < 4:
     detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologists Detected! Infection rates may be affected. No preventative measures taken yet.');\n"
+  else:  # pathologists_cnt > 4
+    detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologists Detected! Infection rates may be affected.');\n"
   for p in pathologists_submitted:
     detect_pathologist = detect_pathologist + "console.log('Pathologist {0} identified.');\n".format(p)
   if pathologists_cnt == 4:
@@ -134,4 +143,8 @@ def index():
 if __name__ == '__main__':
 #  db.create_all()
   port = int(os.environ.get('PORT',5000))
-  app.run(host='0.0.0.0', port=port)
+  app.run(host='0.0.0.0', 
+          port=port,
+          use_debugger=use_debugger,
+          debug=use_debugger,
+          use_reloader=use_debugger)
