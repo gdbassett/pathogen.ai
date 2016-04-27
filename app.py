@@ -83,6 +83,7 @@ def index():
   #TODO: Remove test_key check
   #if test_key_submitted == test_key:
   if 1 == 1:
+    pathologists_submitted = [str(p).lower() for p in pathologists_submitted]
     pathologists_submitted = set(pathologists_submitted).intersection(pathologists)
   else:
     pathologists_submitted = []
