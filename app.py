@@ -64,6 +64,7 @@ def index():
 
   # Get arguments
   pathologists_submitted = request.args.getlist('pathologist')
+  pathologists_submitted = [str(p).lower() for p in pathologists_submitted]
   test_key_submitted = request.args.get("test_key", False)
   noarc = request.args.get('noarc', "false")
   noarc = noarc.lower()
@@ -83,7 +84,6 @@ def index():
   #TODO: Remove test_key check
   #if test_key_submitted == test_key:
   if 1 == 1:
-    pathologists_submitted = [str(p).lower() for p in pathologists_submitted]
     pathologists_submitted = set(pathologists_submitted).intersection(pathologists)
   else:
     pathologists_submitted = []
