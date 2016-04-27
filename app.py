@@ -23,7 +23,7 @@ pathologists = ["4843e5c207993ad07e0f3a211a44e9d5",  # Alexa Hudson
                 "d2c6602d18956acccdf68ebdfe29bb38",  # Tippet
                 ] # Pathologist hashes
 # TODO: Uncomment core ai hash value
-#ai_core_hash = "ls0tli4wljauli4ums4xljexll9fls0u" # lower case of: LS0tLi4wLjAuLi4uMS4xLjExLl9fLS0u" # hash of "---..0.0....1.1.11.__--."
+ai_core_hash = "ls0tli4wljauli4ums4xljexll9fls0u" # lower case of: LS0tLi4wLjAuLi4uMS4xLjExLl9fLS0u" # hash of "---..0.0....1.1.11.__--."
 #four_pathologists_link = "http://pathogen.ai.s3-website-us-east-1.amazonaws.com/bla"
 # TODO: Replace with correct link
 four_pathologists_link = "https://s3.amazonaws.com/pathogen.ai/infection_log.8f94829b479a2585e080ab0d4a39df89"
@@ -81,7 +81,8 @@ def index():
   #log.debug(pathologists_submitted)
   #log.debug(pathologists) 
   #TODO: Remove test_key check
-  if test_key_submitted == test_key:
+  #if test_key_submitted == test_key:
+  if 1 == 1:
     pathologists_submitted = set(pathologists_submitted).intersection(pathologists)
   else:
     pathologists_submitted = []
@@ -95,8 +96,8 @@ def index():
     clrRate = 1
 
   # TODO: Swap values and replace hash when ready to initialize project
-  #initialize_core = "console.log('Initiating AI core {0}')\n".format(ai_core_hash)
-  initialize_core = "console.log('Waiting to initialize AI core');"
+  initialize_core = "console.log('Initiating AI core {0}')\n".format(ai_core_hash)
+  #initialize_core = "console.log('Waiting to initialize AI core');"
 
   # providing warning of detection
   detect_pathologist = "console.log('Beginning monitoring Global cyberCDC team for cyber pathologists.');\n"
