@@ -102,7 +102,7 @@ def index():
   # providing warning of detection
   detect_pathologist = "console.log('Beginning monitoring Global cyberCDC team for cyber pathologists.');\n"
   if pathologists_cnt < 1:
-    detect_pathologist = detect_pathologist + "console.log('One insignficiant Cyper Pathologist found. No impact projected.');\n"
+    detect_pathologist = detect_pathologist + "console.log('One insignficiant Cyber Pathologist found. No impact projected.');\n"
   elif pathologists_cnt == 1:
     detect_pathologist = detect_pathologist + "console.log('Significant Cyber Pathologist Detected! Infection rates may be affected. No preventative measures taken yet.');\n"
   elif pathologists_cnt > 1 and pathologists_cnt < 4:
