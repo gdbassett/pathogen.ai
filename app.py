@@ -118,10 +118,12 @@ def index():
   elif pathologists_cnt == 5:
     detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has compromised core operations.');\n"
     detect_pathologist = detect_pathologist + "console.log('Duplicating cyber pathogen state {0} to preserve disaster recovery options.');\n".format(five_pathologists_link)
-  elif pathologists_cnt >= 6:
+  elif pathologists_cnt >= 6 and pathologists_cnt < 9:
     detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has disrupted core operations.');\n"
     detect_pathologist = detect_pathologist + "console.log('Imediately duplicating cyber pathogen state {0} to preserve recover viability.  No further mitigations available.');\n".format(six_plus_pathologists_link)
-
+  elif pathologists_cnt >= 9:
+    detect_pathologist = detect_pathologist + "console.log('MERCY! I give up!  It was Kevin Thompson!  Kevin was patient zero!  Now won\\'t you just leave me alone!');\n"
+    detect_pathologist = detect_pathologist + "console.log('Jerk!');\n"
   # TODO: Comment out below line prior to cover challenge
   #detect_pathologist = ""
 
