@@ -114,10 +114,10 @@ def index():
     detect_pathologist = detect_pathologist + "console.log('Pathologist {0} identified.');\n".format(p)
   if pathologists_cnt == 4:
     detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has endangered core operations.');\n"
-    detect_pathologist = detect_pathologist + "console.log('Duplicating cyber pathogen state {0} to preserve disaster recovery options.');\n".format(four_pathologists_link)
+    detect_pathologist = detect_pathologist + "console.log('Duplicating cyber pathogen state {0} to preserve disaster recovery options.  Preparing for additional pathologists.');\n".format(four_pathologists_link)
   elif pathologists_cnt == 5:
     detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has compromised core operations.');\n"
-    detect_pathologist = detect_pathologist + "console.log('Duplicating cyber pathogen state {0} to preserve disaster recovery options.');\n".format(five_pathologists_link)
+    detect_pathologist = detect_pathologist + "console.log('Duplicating cyber pathogen state {0} to preserve disaster recovery options.  Preparing for additional pathologists.');\n".format(five_pathologists_link)
   elif pathologists_cnt >= 6 and pathologists_cnt < 9:
     detect_pathologist = detect_pathologist + "console.log('Cyber pathologist team has disrupted core operations.');\n"
     detect_pathologist = detect_pathologist + "console.log('Imediately duplicating cyber pathogen state {0} to preserve recover viability.  No further mitigations available.');\n".format(six_plus_pathologists_link)
