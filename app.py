@@ -20,7 +20,8 @@ pathologists = ["4843e5c207993ad07e0f3a211a44e9d5",  # Alexa Hudson
                 "73a11c2a1b0b2593fe4ee7e3e5e2fc79",  # baker
                 "9d7e1007ecf7445a02f5ed83b32ff32c",  # Jay
                 "8312475fe80119819e749b6527dfa534",  # Ally
-                "d2c6602d18956acccdf68ebdfe29bb38",  # Tippet
+#                "d2c6602d18956acccdf68ebdfe29bb38",  # Tippet
+                "757e58c2885bef82bfa415cccb6840c8",  # Tippet fixed
                 ] # Pathologist hashes
 # TODO: Uncomment core ai hash value
 ai_core_hash = "ls0tli4wljauli4ums4xljexll9fls0u" # lower case of: LS0tLi4wLjAuLi4uMS4xLjExLl9fLS0u" # hash of "---..0.0....1.1.11.__--."
