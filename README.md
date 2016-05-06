@@ -3,7 +3,7 @@
 
 ### Description
 
-(http://cyber.pathogen.ai)
+http://cyber.pathogen.ai
 
 
 A take on @hrbrmstr's pew pew map, this is slightly modified to simulate a pathogen spreading.  Spread probabilities are taken from world migration numbers.
