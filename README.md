@@ -1,7 +1,12 @@
 ### Cyber Pathogen Map
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-### A take on @hrbrmstr's pew pew map, this is slightly modified to simulate a pathogen spreading.  Spread probabilities are taken from world migration numbers.
+### Description
+
+(http://cyber.pathogen.ai)
+
+
+A take on @hrbrmstr's pew pew map, this is slightly modified to simulate a pathogen spreading.  Spread probabilities are taken from world migration numbers.
 
 ### Commands
 'nofx' may be set 'true' to turn off sound effects (default 'false')
