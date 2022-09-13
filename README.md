@@ -3,7 +3,7 @@
 
 ### Description
 
-http://cyber.pathogen.ai
+hxxp://cyber.pathogen.ai # THIS URL IS NO LONGER ASSOCIATED WITH THE CYBER PATHOGEN MAP PROJECT
 
 
 A take on @hrbrmstr's pew pew map, this is slightly modified to simulate a pathogen spreading.  Spread probabilities are taken from world migration numbers.
